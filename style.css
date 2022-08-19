@@ -21,7 +21,7 @@ section.head{
     border: 1px solid grey;
     float:left;
     margin-left:25px;
-    margin-bottom:40px;
+    margin-bottom:px;  
     text-align:left;
 }
 
@@ -32,7 +32,7 @@ section.head{
     height:auto;
     float:right;
     border: 1px solid grey;
-    margin-bottom:40px;
+    margin-bottom:px;
     text-align: left;
     
 }
@@ -45,6 +45,7 @@ section.head{
 a{
 				text-decoration: none;
 				margin-top:1px;
+                                margin-bottom:40px;
 }
 .movies{
 				background-color:skyblue;
