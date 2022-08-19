@@ -52,4 +52,6 @@ a{
 				color:white;
 				width:350px;
 				margin-left:25px;
+                                border-style:1px solid skyblue;
+                                border-radius:5px;    
 }
