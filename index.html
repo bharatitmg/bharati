@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+				<meta charset="UTF-8">
+				<title>Home</title>
+				<link rel="stylesheet" href="style.css">
+<style>
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 20px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
+		
+</head>
+<body>
+				
+       <section id="top" class="head">
+				<img src="images/logo.webp" alt="" height="30px" width="30px">Downlink
+				  </section>
+				
+				<section class="leg">
+						<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" width="20px" height="20px"class="closebtn" style="font-size:40px;"onclick="closeNav()">&times;</a>
+  <a href="index.html">Home</a>
+  <a href="KDrama/Kdrama.html">Kdrama</a>
+  <a href="Hollywood_Movie/Hollywood.html">Hollywood Movie</a>
+  <a href="Tvshow/tvshow.html">Tvshow</a>
+</div>
+<span class="fixed" style="font-size:25px;cursor:pointer" onclick="openNav()">&#9776;Menu</span>
+  
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}</script>
+</section>
+												
+				<br>
+					<iframe class="frame" width="104%" height=""src="Hollywood_Movie/Hollywood.html" allow="fullscreen"  frameborder="0" scrolling=no>
+					  
+												
+												</iframe><br>
+												<a href="Hollywood_Movie/Hollywood.html"><button class="movies">
+																<h3>load more movies</h3></button></a><br>
+														<iframe class="frame" width="104%" height=""src="KDrama/Kdrama.html" allow="fullscreen"  frameborder="0" scrolling=no>
+												
+												</iframe><br>
+												<a href="KDrama/Kdrama.html"><button class="movies">
+																<h3>load more movies</h3></button></a><br>
+																	<iframe class="frame" width="104%" height=""src="Tvshow/tvshow.html" allow="fullscreen"  frameborder="0" scrolling=no>
+												
+												</iframe><br><a href="Tvshow/tvshow.html">
+												<button class="movies">
+																<h3>load more movies</h3></button></a>
+																	
+</body>
+</html>
