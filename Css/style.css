@@ -57,3 +57,8 @@ a{
                                 border-style:1px solid skyblue;
                                 border-radius:5px;    
 }
+.footer{
+         background-color:lightblue;
+         border-radius:7px;
+         border-style:none;
+}
