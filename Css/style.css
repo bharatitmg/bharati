@@ -1,6 +1,6 @@
 section.head{
 				font-size:30px;
-                                margin-left:170px;
+                                margin-left:195px;
                                 margin-right:0.5px;
 }
 .lower{
@@ -61,4 +61,5 @@ a{
          background-color:lightblue;
          border-radius:7px;
          border-style:none;
+         margin-top:50px;
 }
