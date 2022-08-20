@@ -75,3 +75,10 @@ a{
   position:fixed;
   background-color:skyblue;
 }
+.notes{
+  background-color:#FF95CCFF;
+}
+#notes{
+  padding:10px;
+  
+}
