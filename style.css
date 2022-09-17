@@ -126,6 +126,7 @@ a{
   width:200px;
   margin-top:1px;
   position:top right;
+  font-family:'Courier New', monospace;
 }
 .fixed{
   position:fixed;
@@ -138,3 +139,5 @@ a{
   padding:10px;
   
 }
+
+
