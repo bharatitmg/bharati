@@ -107,6 +107,7 @@ div.footer{
 				border-bottom:1px solid gray;
 				border-left: 1px solid gray;
 				border-right:1px solid gray ;
+			  text-align:center;
 }
 div.holder{
       
@@ -120,20 +121,6 @@ div.LHS{
 			margin:5px;
 			height:470px;
 }
-div.RHS{
-				
-				margin:5px;
-			  
-			 
-			  height:470px;
-			  
-}
-div.middle{
-			
-				margin:5px;
-			
-				height:470px;
-}
 img.pic{
 				width:300px;
 				height:400px;
@@ -143,4 +130,25 @@ div.boxer{
 }
 div.heading{
   width:100%;
+}
+div.space{
+				padding:25px;
+}
+button#email{
+				width:150px;
+				height:auto;
+				background-color:skyblue;
+				border:none;
+				border-style:outset;
+				border-radius:7px;
+				
+}
+button#loader{
+				width:150px;
+				height:auto;
+				background-color:skyblue;
+				border:none;
+				border-style:outset;
+				border-radius:7px;
+				
 }
