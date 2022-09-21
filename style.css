@@ -157,4 +157,24 @@ button#loader{
 				text-align:center;
 				margin-left:;
 				color:whitesmoke;
-				}
+	}
+div.direct{
+				position: fixed;
+				background-color:#0000dc;
+				border-radius: 50px;
+				width:170px;
+				height:50px;
+				font-size:45px;
+				margin-left:270px;
+				margin-bottom:55px;
+}
+div.showdirect{
+				position: fixed;
+				background-color:#ff0000;
+				border-radius: 50px;
+				width:170px;
+				height:50px;
+				font-size:45px;
+				margin-left:270px;
+				margin-top:50px;
+}
