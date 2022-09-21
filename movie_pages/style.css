@@ -1,3 +1,5 @@
+/* css file for download link or episodes*/
+/* style for download button */
 .download{
 				background-color:green;
 				color:white;
@@ -5,11 +7,35 @@
 				height: 35px;
 			 border-radius:4px;
 }
+
+/* style for sypnosis and notice */
 p{
 				color:grey;
 }
+
+/* style for youtube video frame */
 iframe{
 				align-content:center;
 				text-align:center;
 				margin-left:8px;
+				
+}
+
+
+
+/* style for image  */
+img.image_episode{
+				
+				height:150px;
+				width:90px;
+}
+/* div of image */
+div.image{
+				width:100%;
+				float: left;
+				padding-top:40px;
+}
+/* div of download links*/
+div.space{
+				padding:25px;
 }
