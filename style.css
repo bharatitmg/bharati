@@ -1,59 +1,5 @@
-.container {
-	max-width: 640px;
-	margin: 30px auto;
-	background: #fff;
-	border-radius: 8px;
-	padding: 20px;
-}
- 
-.margin-bottom {
-	150px;
-}
 
-.comment {
-	display: block;
-	transition: all 1s;
-}
-
-.commentClicked {
-	min-height: 0px;
-	border: 1px solid #eee;
-	border-radius: 5px;
-	padding: 5px 10px
-}
-
-textarea {
-	width: 100%;
-	border: none;
-	background: #E8E8E8;
-	padding: 5px 10px;
-	height: 50%;
-	border-radius: 5px 5px 0px 0px;
-	border-bottom: 2px solid #016BA8;
-	transition: all 0.5s;
-	margin-top: 15px;
-}
-
-button.primaryContained {
-	background: #016ba8;
-	color: #fff;
-	padding: 10px 10px;
-	border: none;
-	margin-top: 0px;
-	cursor: pointer;
-	text-transform: uppercase;
-	letter-spacing: 4px;
-	box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.25);
-	transition: 1s all;
-	font-size: 10px;
-	border-radius: 5px;
-}
-
-button.primaryContained:hover {
-	background: #9201A8;
-}
-
-
+/* top heading */
 section.head{
 				font-size:30px;
 				margin-right:px;
@@ -61,19 +7,23 @@ section.head{
 				width:180px;
 				float:left;
 }
+/* menu in side */
 section.leg{
          float:right;
          width:95px;
 }
+
 .lower{
 				font-size:25px;
 }
 
+/* link css */
 a{
 				text-decoration: none;
 				margin-top:1px;
 				color:black;
 }
+
 .movies{
 				background-color:skyblue;
 				color:white;
@@ -112,7 +62,7 @@ div.footer{
 }
 div.holder{
       
-     float: left;
+     
      padding:5px;
      
 
@@ -121,14 +71,13 @@ div.LHS{
 		
 			margin:5px;
 			height:470px;
+		 float: left;
 }
 img.pic{
 				width:300px;
 				height:400px;
 }
-div.boxer{
-  padding-top:30px;
-}
+
 div.heading{
   width:100%;
 }
@@ -157,24 +106,74 @@ button#loader{
 				text-align:center;
 				margin-left:;
 				color:whitesmoke;
+				font-size:20px;
 	}
-div.direct{
-				position: fixed;
-				background-color:#0000dc;
-				border-radius: 50px;
-				width:170px;
-				height:50px;
-				font-size:45px;
-				margin-left:270px;
-				margin-bottom:55px;
+
+/* for mobile device */
+
+@media only screen and (max-width: 600px) {
+/* footer of div */
+div.footer{
+				border-bottom:1px solid gray;
+				border-left: 1px solid gray;
+				border-right:1px solid gray ;
+			  text-align:center;
+			  width:170px;
 }
-div.showdirect{
-				position: fixed;
-				background-color:#ff0000;
-				border-radius: 50px;
+div.holder{
+      
+     
+     align-items:center;
+     padding-left:20px;
+
+}
+div.LHS{
+		
+		  
+			height:340px;
+			float:left;
+}
+img.pic{
 				width:170px;
-				height:50px;
-				font-size:45px;
-				margin-left:270px;
-				margin-top:50px;
+				height:270px;
+}
+a{
+				text-decoration: none;
+				margin-top:1px;
+				color:black;
+				font-size:9px;
+}
+}
+/* for little smaller device */
+@media only screen and (max-width: 400px) {
+		div.footer{
+				border-bottom:1px solid gray;
+				border-left: 1px solid gray;
+				border-right:1px solid gray ;
+			  text-align:center;
+			  width:150px;
+}
+div.holder{
+      
+     
+     align-items:center;
+     padding-left:20px;
+
+}
+div.LHS{
+		
+		
+			height:340px;
+			float:left;
+}
+img.pic{
+				width:150px;
+				height:250px;
+}
+a{
+				text-decoration: none;
+				margin-top:1px;
+				color:black;
+				font-size:9px;
+}		
 }
