@@ -12,7 +12,9 @@ section.leg{
          float:right;
          width:95px;
 }
-
+section#holly{
+				overflow:hidden;
+}
 .lower{
 				font-size:25px;
 }
@@ -82,7 +84,8 @@ div.heading{
   width:100%;
 }
 div.space{
-				padding:20px;
+				padding:18px;
+				
 			  
 }
 button#email{
@@ -108,6 +111,9 @@ button#loader{
 				color:whitesmoke;
 				font-size:20px;
 	}
+	li{
+					border:1px gray solid;
+	}
 
 /* for mobile device */
 
@@ -118,7 +124,7 @@ div.footer{
 				border-left: 1px solid gray;
 				border-right:1px solid gray ;
 			  text-align:center;
-			  width:170px;
+			  width:195px;
 }
 div.holder{
       
@@ -134,7 +140,7 @@ div.LHS{
 			float:left;
 }
 img.pic{
-				width:170px;
+				width:195px;
 				height:270px;
 }
 a{
