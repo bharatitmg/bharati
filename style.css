@@ -12,9 +12,7 @@ section.leg{
          float:right;
          width:95px;
 }
-section#holly{
-				overflow:hidden;
-}
+
 .lower{
 				font-size:25px;
 }
@@ -61,8 +59,7 @@ div.footer{
 				border-left: 1px solid gray;
 				border-right:1px solid gray ;
 			  text-align:center;
-			  overflow:hidden;
-			  width:300px;
+			  width: 300px;
 }
 div.holder{
       
@@ -86,8 +83,8 @@ div.heading{
   width:100%;
 }
 div.space{
-				padding:18px;
-				
+				padding:20px;
+		
 			  
 }
 button#email{
@@ -113,9 +110,17 @@ button#loader{
 				color:whitesmoke;
 				font-size:20px;
 	}
-	li{
-					border:1px gray solid;
-	}
+section.holly{
+				margin: auto;
+				overflow:hidden;
+}
+#hollywood{
+  min-height:300px;
+  background:#35424a;
+  margin-bottom:20px;
+  margin-top:20px;
+  color:whitesmoke;
+}
 
 /* for mobile device */
 
