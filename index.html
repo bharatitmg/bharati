@@ -1,39 +1,147 @@
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>calculator</title>
+    <title>My Portfolio</title>
+    <style>
+        /* CSS Styles */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        h1, h2 {
+            text-align: center;
+        }
+
+        .project {
+            margin-bottom: 40px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .project img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 6px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .project h3 {
+            margin: 20px 0 10px;
+        }
+
+        .project p {
+            margin: 10px 0;
+            font-size: 16px;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+
+        .modal-content {
+            background-color: #fff;
+            margin: 10% auto;
+            padding: 20px;
+            max-width: 600px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 24px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-    <h1>calculator</h1>
-    <input type="text"  class="input"/>
+    <header>
+        <h1>My Portfolio</h1>
+    </header>
+
     <div class="container">
-        <div class="row">
-            <button class="button">7</button>
-            <button class="button">8</button>
-            <button class="button">9</button>
-            <button class="button" id="sign">*</button>
+        <h2>About Me</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed enim euismod, fringilla orci sed, rutrum neque.</p>
+
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>Project 1</h3>
+            <img src="project1.jpg" alt="Project 1" onclick="openModal('project1')">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </div>
-        <div class="row">
-            <button class="button">4</button>
-            <button class="button">5</button>
-            <button class="button">6</button>
-            <button class="button" id="sign">/</button>
-        </div>
-        <div class="row">
-            <button class="button">1</button>
-            <button class="button">2</button>
-            <button class="button">3</button>
-            <button class="button" id="sign">+</button>
-        </div><div class="row">
-            <button class="button">C</button>
-            <button class="button">.</button>
-            <button class="button">0</button>
-            <button class="button" id="special">=</button>
+
+        <div class="project">
+            <h3>Project 2</h3>
+            <img src="project2.jpg" alt="Project 2" onclick="openModal('project2')">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </div>
     </div>
-    <script src="script.js"></script>
+
+    <!-- Modal -->
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h3 id="modal-title"></h3>
+            <img id="modal-img" src="" alt="">
+            <p id="modal-description"></p>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript code
+        function openModal(projectId) {
+            var modal = document.getElementById("modal");
+            var title = document.getElementById("modal-title");
+            var img = document.getElementById("modal-img");
+            var description = document.getElementById("modal-description");
+
+            // Set the project details based on projectId
+            if (projectId === "project1") {
+                title.innerHTML = "Project 1";
+                img.src = "project1.jpg";
+                description.innerHTML = "Lorem ipsum dolor sit amet, consectetur adipiscing elit.";
+            } else if (projectId === "project2") {
+                title.innerHTML = "Project 2";
+                img.src = "project2.jpg";
+                description.innerHTML = "Lorem ipsum dolor sit amet, consectetur adipiscing elit.";
+            }
+
+            modal.style.display = "block";
+        }
+
+        function closeModal() {
+            var modal = document.getElementById("modal");
+            modal.style.display = "none";
+        }
+    </script>
 </body>
 </html>
