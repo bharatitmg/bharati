@@ -6,6 +6,7 @@ body, h1, h2, h3, p, ul, li {
 
 body {
   font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
 }
 
 /* Header styles */
@@ -16,7 +17,8 @@ header {
 }
 
 header h1 {
-  font-size: 24px;
+  font-size: 32px;
+  text-align: center;
 }
 
 /* Navigation styles */
@@ -39,6 +41,11 @@ nav ul li a {
   color: #fff;
   text-decoration: none;
   padding: 5px 10px;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #ffca28;
 }
 
 /* Main section styles */
@@ -56,11 +63,13 @@ main {
 .hero h2 {
   font-size: 36px;
   margin-bottom: 10px;
+  color: #333;
 }
 
 .hero p {
   font-size: 18px;
   margin-bottom: 20px;
+  color: #777;
 }
 
 .btn {
@@ -71,6 +80,11 @@ main {
   text-decoration: none;
   font-weight: bold;
   border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #ffca28;
 }
 
 /* Featured movies styles */
@@ -79,24 +93,28 @@ main {
 }
 
 .movie-list {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
 }
 
 .movie {
   text-align: center;
-  margin-bottom: 20px;
 }
 
 .movie img {
-  width: 200px;
-  height: 300px;
+  width: 100%;
+  height: auto;
   object-fit: cover;
   margin-bottom: 10px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .movie h3 {
   font-size: 18px;
+  margin-top: 10px;
+  color: #333;
 }
 
 /* Footer styles */
@@ -105,4 +123,19 @@ footer {
   color: #fff;
   padding: 20px;
   text-align: center;
+  font-size: 14px;
+}
+
+footer p {
+  margin-bottom: 10px;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #ffca28;
 }
