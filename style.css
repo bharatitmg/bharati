@@ -1,103 +1,108 @@
-a{
-    text-decoration: none;
-}
-/*whole background contaioner of cover*/
-.background-cover{
-    position:relative;
-}
-/*nav bar div*/
-.nav-bar{
-    font-size: xx-large;
-    color: aliceblue;
-    position:relative;
-    z-index: 2;
-}
-/*nav bar list*/
-.nav-bar li{
-    display: inline-block;
-    padding-right: 6%;
-    background-color:black;
-}
-ul{
-    list-style-type: none;
-    background-color: black;
-   
-}
-/*background image*/
-.img{
-    position: absolute;
-}
-.cover{
-    object-fit: cover;
-    width: 100%;
-    height: 10%;
-}
-/*profile image*/
-.profile-img{
-    margin-top:48%;
-    position: relative;
-}
-.profile-img img{
-    border-radius: 100%;
-   
+/* Reset some default styles */
+body, h1, h2, h3, p, ul, li {
+  margin: 0;
+  padding: 0;
 }
 
-/*about me designs*/
-.container{
-    margin-top: 4%;
+body {
+  font-family: Arial, sans-serif;
 }
-.topic{
-     font-style: normal;
-     font-family: 'Courier New', Courier, monospace;
+
+/* Header styles */
+header {
+  background-color: #333;
+  padding: 20px;
+  color: #fff;
 }
-.aboutme-description{
-    margin-top: 2%;
-    padding: 20px;
-    background-color: cadetblue;
-    border-style: 100px solid cadetblue;
-    border: outset;
-    font-style: oblique;
+
+header h1 {
+  font-size: 24px;
 }
-/*projects*/
-.fa-facebook {
-    background: #3B5998;
-    color: white;
-  }
-  
-  .fa-twitter {
-    background: #55ACEE;
-    color: white;
-  }
-  
-  .fa-google {
-    background: #dd4b39;
-    color: white;
-  }
-  
-  .fa-linkedin {
-    background: #007bb5;
-    color: white;
-  }
-  
-  .fa-youtube {
-    background: #bb0000;
-    color: white;
-  }
-  
-  .fa-instagram {
-    background: #125688;
-    color: white;
-  }
-  .fa {
-    padding: 20px;
-    font-size: 30px;
-    width: 50px;
-    text-align: center;
-    text-decoration: none;
-    margin: 5px 2px;
-  }
-  
-  .fa:hover {
-      opacity: 0.7;
-  }
-  
+
+/* Navigation styles */
+nav {
+  background-color: #444;
+  padding: 10px;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin-right: 10px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 10px;
+}
+
+/* Main section styles */
+main {
+  max-width: 960px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.hero h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+/* Featured movies styles */
+.featured-movies {
+  margin-bottom: 40px;
+}
+
+.movie-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.movie {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.movie img {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.movie h3 {
+  font-size: 18px;
+}
+
+/* Footer styles */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
