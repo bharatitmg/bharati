@@ -1,1 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Redirect to Random Page</title>
+    <script type="text/javascript">
+      function redirectToRandomPage() {
+        // List of page URLs to randomly redirect
+        var pageUrls = [
+          "https://www.bharatitamang.com.np/2023/07/artificial-intelligence-in-finance.html",
+          "https://www.bharatitamang.com.np/2023/07/embracing-sustainability-fashion.html",
+          "https://www.bharatitamang.com.np/2023/07/virtual-reality-in-healthcare.html",
+          "https://www.bharatitamang.com.np/2023/07/space-tourism-next-frontier-in-travel.html",
+          "https://www.bharatitamang.com.np/2023/07/mastering-python-journey-into-world-of.html",
+          "https://www.bharatitamang.com.np/2023/07/the-phenomenon-of-mrbeast-changing.html",
+          "https://www.bharatitamang.com.np/2023/07/the-gorkha-army-legacy-of-courage-and.html",
+          "https://www.bharatitamang.com.np/2023/07/gautam-buddha-enlightened-one-who.html",
+          "https://www.bharatitamang.com.np/2023/07/teotihuacan-unraveling-enigmatic-city.html",
+          "https://www.bharatitamang.com.np/2023/07/unveiling-enigma-of-angkor-wat.html",
+          "https://www.bharatitamang.com.np/2023/07/machu-picchu-unveiling-mysterious.html",
+          "https://www.bharatitamang.com.np/2023/07/pompeii-unveiling-tragic-beauty-of.html",
+          "https://www.bharatitamang.com.np/2023/07/unraveling-mythical-enigma-mysteries-of.html",
+          "https://www.bharatitamang.com.np/2023/06/the-curious-case-of-left-vs-right-why.html",
+          "https://www.bharatitamang.com.np/2023/06/understanding-artificial-intelligence.html"
+        ];
 
+        // Video URL to embed
+        var videoUrl =
+          "https://archive.org/embed/639d-3893-5ef-6-42e-4-a-2f-9-4b-1a-16622cad";
+
+        // Generate a random index to select a page URL from the list
+        var randomPageIndex = Math.floor(Math.random() * pageUrls.length);
+
+        // Get the page URL based on the random index
+        var pageUrl = pageUrls[randomPageIndex];
+
+        // Append the video URL as a parameter to the page URL
+        var redirectUrl = pageUrl + "?video=" + encodeURIComponent(videoUrl);
+
+        // Redirect the user to the random page with the video parameter
+        window.location.href = redirectUrl;
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Redirect to Random Page</h1>
+<button onclick="redirectToRandomPage();" style="padding: 10px 20px; background-color: #4CAF50; color: white; border: none; cursor: pointer; border-radius: 4px;">Redirect to Random Page</button>
+  </body>
+</html>
