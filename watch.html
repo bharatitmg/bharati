@@ -1,75 +1,66 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Page 1</title>
+  <title>Watch</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f7f7f7;
+    }
+    #header {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+    }
+    #video-container {
+      position: relative;
+      padding-top: 56.25%;
+      overflow: hidden;
+    }
+    #video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  </style>
 </head>
 <body>
-  <!-- <h1>Redirected Page with Embedded Video</h1>
-  <div id="video"></div>
-  <script type="text/javascript">
-    // Get the video details from the parameters in the query string
-    function getParameterByName(name, url) {
-      if (!url) url = window.location.href;
-      name = name.replace(/[\[\]]/g, "\\$&");
-      var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
-          results = regex.exec(url);
-      if (!results) return null;
-      if (!results[2]) return '';
-      return decodeURIComponent(results[2].replace(/\+/g, " "));
-    }
+  <div id="header">
+    <h1>Wait For Moments</h1>
+  </div>
 
-    window.onload = function() {
-      // Get the data path parameter from the URL
-      var dataPath = getParameterByName('dataPath');
-      var params = new URLSearchParams(window.location.search);
-      var magnetURI = decodeURIComponent(params.get('magnet'));
-
-      if (magnetURI && dataPath) {
-        // Create the video element with the Webtor Player SDK
-        var videoElement = document.createElement('video');
-        videoElement.controls = true;
-        videoElement.src = magnetURI;
-        videoElement.setAttribute('data-path', dataPath);
-        var scriptElement = document.createElement('script');
-        scriptElement.src = "https://cdn.jsdelivr.net/npm/@webtor/player-sdk-js/dist/index.min.js";
-        scriptElement.charset = "utf-8";
-        scriptElement.async = true;
-        // Append the video to the body
-        document.getElementById('video').appendChild(videoElement);
-        document.getElementById('video').appendChild(scriptElement);
+  <div id="video-container">
+    <script type="text/javascript">
+      // Get the video URL parameter from the query string
+      function getParameterByName(name, url) {
+        if (!url) url = window.location.href;
+        name = name.replace(/[\[\]]/g, "\\$&");
+        var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+            results = regex.exec(url);
+        if (!results) return null;
+        if (!results[2]) return '';
+        return decodeURIComponent(results[2].replace(/\+/g, " "));
       }
-    };
-  </script> -->
 
-  <h1>Redirected Page with Embedded Video</h1>
-  <div id="video-container" style="padding:41.88% 0 0 0;position:relative;"></div>
+      window.onload = function() {
+        // Get the video URL from the parameter
+        var videoUrl = getParameterByName('video');
 
-  <script type="text/javascript">
-    // Get the video URL parameter from the query string
-    function getParameterByName(name, url) {
-      if (!url) url = window.location.href;
-      name = name.replace(/[\[\]]/g, "\\$&");
-      var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
-          results = regex.exec(url);
-      if (!results) return null;
-      if (!results[2]) return '';
-      return decodeURIComponent(results[2].replace(/\+/g, " "));
-    }
-
-    window.onload = function() {
-      // Get the video URL from the parameter
-      var videoUrl = getParameterByName('video');
-
-      // Embed the video on the redirected page if the video URL is available
-      if (videoUrl) {
-        var embedCode = '<iframe frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"src="' + videoUrl + '"></iframe>';
-        document.getElementById('video-container').innerHTML = embedCode;
-        var scriptElement = document.createElement('script');
-        scriptElement.src = "https://player.vimeo.com/api/player.js";
-        document.getElementById('video-container').appendChild(scriptElement);
-      }
-    };
-  </script>
-  
+        // Embed the video on the redirected page if the video URL is available
+        if (videoUrl) {
+          var embedCode = '<iframe frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen src="' + videoUrl + '"></iframe>';
+          document.getElementById('video-container').innerHTML = embedCode;
+          var scriptElement = document.createElement('script');
+          scriptElement.src = "https://player.vimeo.com/api/player.js";
+          document.getElementById('video-container').appendChild(scriptElement);
+        }
+      };
+    </script>
+  </div>
 </body>
 </html>
