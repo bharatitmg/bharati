@@ -38,34 +38,35 @@
 <body>
 <div id="header">
     <h1>Wait For Moments</h1>
-  </div
+</div>
 
-  <div id="video-container"></div>
-    <script type="text/javascript">
-      // Get the video URL parameter from the query string
-      function getParameterByName(name, url) {
-        if (!url) url = window.location.href;
-        name = name.replace(/[\[\]]/g, "\\$&");
-        var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
-            results = regex.exec(url);
-        if (!results) return null;
-        if (!results[2]) return '';
-        return decodeURIComponent(results[2].replace(/\+/g, " "));
+    <div id="video-container" style="padding:41.88% 0 0 0;position:relative;"></div>
+
+  <script type="text/javascript">
+    // Get the video URL parameter from the query string
+    function getParameterByName(name, url) {
+      if (!url) url = window.location.href;
+      name = name.replace(/[\[\]]/g, "\\$&");
+      var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+          results = regex.exec(url);
+      if (!results) return null;
+      if (!results[2]) return '';
+      return decodeURIComponent(results[2].replace(/\+/g, " "));
+    }
+
+    window.onload = function() {
+      // Get the video URL from the parameter
+      var videoUrl = getParameterByName('video');
+
+      // Embed the video on the redirected page if the video URL is available
+      if (videoUrl) {
+        var embedCode = '<iframe frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"src="' + videoUrl + '"></iframe>';
+        document.getElementById('video-container').innerHTML = embedCode;
+        var scriptElement = document.createElement('script');
+        scriptElement.src = "https://player.vimeo.com/api/player.js";
+        document.getElementById('video-container').appendChild(scriptElement);
       }
-
-      window.onload = function() {
-        // Get the video URL from the parameter
-        var videoUrl = getParameterByName('video');
-
-        // Embed the video on the redirected page if the video URL is available
-        if (videoUrl) {
-          var embedCode = '<iframe frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen src="' + videoUrl + '"></iframe>';
-          document.getElementById('video-container').innerHTML = embedCode;
-          var scriptElement = document.createElement('script');
-          scriptElement.src = "https://player.vimeo.com/api/player.js";
-          document.getElementById('video-container').appendChild(scriptElement);
-        }
-      };
-    </script>
+    };
+  </script>
 </body>
 </html>
