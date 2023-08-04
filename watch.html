@@ -61,7 +61,7 @@
 
       // Embed the video on the redirected page if the video URL is available
       if (videoUrl) {
-        var embedCode = '<iframe src="' + videoUrl + '"></iframe>';
+        var embedCode = '<iframe width="100%" height="100%" frameborder="0" allowfullscreen src="' + videoUrl + '"></iframe>';
         document.getElementById('video-container').innerHTML = embedCode;
       }
     };
