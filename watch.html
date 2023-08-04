@@ -40,7 +40,7 @@
     <h1>Wait For Moments</h1>
 </div>
 
-    <div id="video-container" style="padding:41.88% 0 0 0;position:relative;"></div>
+   <div id="video-container"></div>
 
   <script type="text/javascript">
     // Get the video URL parameter from the query string
@@ -60,11 +60,8 @@
 
       // Embed the video on the redirected page if the video URL is available
       if (videoUrl) {
-        var embedCode = '<iframe frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"src="' + videoUrl + '"></iframe>';
+        var embedCode = '<iframe src="' + videoUrl + '"></iframe>';
         document.getElementById('video-container').innerHTML = embedCode;
-        var scriptElement = document.createElement('script');
-        scriptElement.src = "https://player.vimeo.com/api/player.js";
-        document.getElementById('video-container').appendChild(scriptElement);
       }
     };
   </script>
