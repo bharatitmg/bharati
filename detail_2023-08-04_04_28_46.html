@@ -162,15 +162,15 @@
 		</div>
 </div>
 <!-- End Content -->
+
 <script>
   // Get the current URL
   var currentURL = window.location.href;
 
   // Function to extract the episode number from the URL parameter
   function getEpisodeNumber(url) {
-    var urlParams = new URLSearchParams(url.search);
-    var episodeNumber = urlParams.get("ep");
-    return episodeNumber;
+    var match = url.match(/[?&]ep=(\d+)/);
+    return match ? match[1] : null;
   }
 
   // Get the episode number from the current URL
