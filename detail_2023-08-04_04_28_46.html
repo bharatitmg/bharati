@@ -49,7 +49,9 @@
         </div>
     </div>
 </nav>
-<p style="color: white; background-color: red; font-weight: bold; text-decoration: none;">scroll down for link</p>
+<div id="scroll">
+
+</div>
 <div class="container mt-5">
     <!-- Post content -->
     <div class="post-content">
@@ -186,7 +188,7 @@
 
     // Create a new 'a' element
     var link = document.createElement('a');
-
+    var para = document.createElement('p');
     // Set the 'href' attribute
     link.href = newUrl;
 
@@ -198,11 +200,18 @@
 
     // Set the link text
     link.textContent = 'Click To Watch';
+    para.style.color = 'white';
+    para.style.backgroundColor = 'red';
+    para.style.fontWeight = 'bold';
+    para.style.textDecoration = 'none';
 
+    // Set the link text
+    para.textContent = 'Scroll Down For Link';
     // Get the 'anime' div by its id
     var animeDiv = document.getElementById('anime');
-
+    var pardiv = document.getElementById('scroll');
     // Append the link to the 'anime' div
+    pardiv.appendChild(para);
     animeDiv.appendChild(link);
   } else {
     // Handle the case where the 'ep' parameter is not present in the URL
