@@ -202,13 +202,13 @@
   // Check if an episode number was extracted from the URL
   if (episodeNumber) {
     // Create the new URL with the extracted episode number
-    var newUrl = baseUrl + episodeNumber;
+    var newUrl = baseUrl;
 
     // Create a new 'a' element
     var link = document.createElement('a');
     var para = document.createElement('p');
     // Set the 'href' attribute
-    link.href = episodeNumber;
+    link.href = newUrl;
 
     // Set the CSS styles
     link.style.color = 'white';
