@@ -100,9 +100,8 @@
 <br>
 <br>Chapter 5: Implementing Effective Marketing Strategies
 <br>
-	    <br>
-	    <a href="https://nnnn.entertain-meme.repl.co/watch.php?src=https://9anime.homes/stream/play.php?slug=jujutsu-kaisen-2nd-season-episode-1" style="color: white; background-color: red; font-weight: bold; text-decoration: none;">Click To Watch</a>
-	    <br>
+	    <div id="anime">
+	    </div>
 <br>Marketing is the lifeblood of any online business. Here, we'll explore a plethora of digital marketing strategies, including search engine optimization (SEO), social media marketing, email marketing, postContent marketing, influencer partnerships, and paid advertising. Learn how to create a comprehensive marketing plan tailored to your business goals and budget.
 <br>
 <br>Chapter 6: Mastering Customer Acquisition and Retention
@@ -163,6 +162,53 @@
 		</div>
 </div>
 <!-- End Content -->
+<script>
+  // Get the current URL
+  var currentURL = window.location.href;
+
+  // Function to extract the episode number from the URL parameter
+  function getEpisodeNumber(url) {
+    var urlParams = new URLSearchParams(url.search);
+    var episodeNumber = urlParams.get("ep");
+    return episodeNumber;
+  }
+
+  // Get the episode number from the current URL
+  var episodeNumber = getEpisodeNumber(currentURL);
+
+  // Define the base URL
+  var baseUrl = 'https://nnnn.entertain-meme.repl.co/watch.php?src=https://9anime.homes/stream/play.php?slug=jujutsu-kaisen-2nd-season-episode-';
+
+  // Check if an episode number was extracted from the URL
+  if (episodeNumber) {
+    // Create the new URL with the extracted episode number
+    var newUrl = baseUrl + episodeNumber;
+
+    // Create a new 'a' element
+    var link = document.createElement('a');
+
+    // Set the 'href' attribute
+    link.href = newUrl;
+
+    // Set the CSS styles
+    link.style.color = 'white';
+    link.style.backgroundColor = 'red';
+    link.style.fontWeight = 'bold';
+    link.style.textDecoration = 'none';
+
+    // Set the link text
+    link.textContent = 'Click To Watch';
+
+    // Get the 'anime' div by its id
+    var animeDiv = document.getElementById('anime');
+
+    // Append the link to the 'anime' div
+    animeDiv.appendChild(link);
+  } else {
+    // Handle the case where the 'ep' parameter is not present in the URL
+    console.error('Episode number not found in the URL.');
+  }
+</script>
 <div class="container">
 	<div class="row justify-content-between">
 		<div class="col-md-8">
