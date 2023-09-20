@@ -162,58 +162,55 @@
 		</div>
 </div>
 <script>
-     // Get the current URL
-     var currentURL = window.location.href;
-   
-     // Function to extract the episode number from the URL parameter
-     function getEpisodeNumber(url) {
-       var match = url.match(/[?&]src=(\d+)/);
-       return match ? match[1] : null;
-     }
-   
-     // Get the episode number from the current URL
-     var src = getEpisodeNumber(currentURL);
-   
-     // Define the base URL
-     var baseUrl = 'https://nnnn.entertain-meme.repl.co/watch.php?src=';
-   
-     // Check if an episode number was extracted from the URL
-     if (src) {
-       // Create the new URL with the extracted episode number
-       var newUrl = baseUrl +src;
-   
-       // Create a new 'a' element
-       var link = document.createElement('a');
-       var para = document.createElement('p');
-       // Set the 'href' attribute
-       link.href = newUrl;
-   
-       // Set the CSS styles
-       link.style.color = 'white';
-       link.style.backgroundColor = 'red';
-       link.style.fontWeight = 'bold';
-       link.style.textDecoration = 'none';
-   
-       // Set the link text
-       link.textContent = 'Click To Watch';
-       para.style.color = 'white';
-       para.style.backgroundColor = 'red';
-       para.style.fontWeight = 'bold';
-       para.style.textDecoration = 'none';
-   
-       // Set the link text
-       para.textContent = 'Scroll Down For Link';
-       // Get the 'anime' div by its id
-       var animeDiv = document.getElementById('anime');
-       var pardiv = document.getElementById('scroll');
-       // Append the link to the 'anime' div
-       pardiv.appendChild(para);
-       animeDiv.appendChild(link);
-     } else {
-       // Handle the case where the src parameter is not present in the URL
-       console.error('Episode number not found in the URL.');
-     }
-   </script>
+        // Get the current URL
+        var currentURL = window.location.href;
+
+        // Function to extract the src parameter from the URL
+        function getSrcFromURL(url) {
+            var match = url.match(/[?&]src=([^&]+)/);
+            return match ? decodeURIComponent(match[1]) : null;
+        }
+
+        // Get the src parameter from the current URL
+        var src = getSrcFromURL(currentURL);
+
+        // Define the base URL
+        var baseUrl = 'https://nnnn.entertain-meme.repl.co/watch.php?src=';
+
+        // Check if a src parameter was extracted from the URL
+        if (src) {
+            // Create the new URL with the extracted src parameter
+            var newUrl = baseUrl + encodeURIComponent(src);
+
+            // Create a new 'a' element for the link
+            var link = document.createElement('a');
+            link.href = newUrl;
+            link.textContent = 'Click To Watch';
+            link.style.color = 'white';
+            link.style.backgroundColor = 'red';
+            link.style.fontWeight = 'bold';
+            link.style.textDecoration = 'none';
+
+            // Create a new 'p' element for the paragraph
+            var para = document.createElement('p');
+            para.textContent = 'Scroll Down For Link';
+            para.style.color = 'white';
+            para.style.backgroundColor = 'red';
+            para.style.fontWeight = 'bold';
+            para.style.textDecoration = 'none';
+
+            // Get the 'anime' div and 'scroll' div by their IDs
+            var animeDiv = document.getElementById('anime');
+            var scrollDiv = document.getElementById('scroll');
+
+            // Append the link and paragraph to their respective divs
+            animeDiv.appendChild(link);
+            scrollDiv.appendChild(para);
+        } else {
+            // Handle the case where the src parameter is not present in the URL
+            console.error('Src parameter not found in the URL.');
+        }
+    </script>
 <!-- End Content -->
 <div class="container">
 	<div class="row justify-content-between">
