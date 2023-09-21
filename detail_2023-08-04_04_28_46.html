@@ -49,13 +49,22 @@
         </div>
     </div>
 </nav>
-<div id="scroll">
-
-</div>
 <div class="container mt-5">
     <!-- Post content -->
     <div class="post-content">
+	     <div class="ad-placeholder"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9631856282418168" crossorigin="anonymous"></script>
+                 <!-- bj -->
+                 <ins class="adsbygoogle"
+                      style="display:block"
+                      data-ad-client="ca-pub-9631856282418168"
+                      data-ad-slot="9450638780"
+                      data-ad-format="auto"
+                      data-full-width-responsive="true"></ins>
+                 <script>
+                      (adsbygoogle = window.adsbygoogle || []).push({});
+                 </script></div>
         <h1>Unlocking the Secrets to Building a Successful Online Business</h1>
+	    <div id="myVideo"></div>
                     <div class="ad-placeholder"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9631856282418168" crossorigin="anonymous"></script>
                  <!-- bj -->
                  <ins class="adsbygoogle"
@@ -166,57 +175,17 @@
 <!-- End Content -->
 
 <script>
-  // Get the current URL
-  var currentURL = window.location.href;
+// Get localStorage variable 'src'
+var src = localStorage.getItem("src");
 
-  // Function to extract the episode number from the URL parameter
-  function getEpisodeNumber(url) {
-    var match = url.match(/[?&]ep=(\d+)/);
-    return match ? match[1] : null;
-  }
+if (src) {
+    // Set the source of the video
+    document.getElementById("myVideo").innerHTML = '<iframe src="' + src + '" ></iframe>';
+} else {
+    // Handle the case where 'src' is not found in localStorage
+    document.getElementById("myVideo").innerHTML = 'Video source not found.';
+}
 
-  // Get the episode number from the current URL
-  var episodeNumber = getEpisodeNumber(currentURL);
-
-  // Define the base URL
-  var baseUrl = 'https://nnnn.entertain-meme.repl.co/watch.php?src=https://9anime.homes/stream/play.php?slug=jujutsu-kaisen-2nd-season-episode-';
-
-  // Check if an episode number was extracted from the URL
-  if (episodeNumber) {
-    // Create the new URL with the extracted episode number
-    var newUrl = baseUrl + episodeNumber;
-
-    // Create a new 'a' element
-    var link = document.createElement('a');
-    var para = document.createElement('p');
-    // Set the 'href' attribute
-    link.href = newUrl;
-    link.target = '_blank';
-    // Set the CSS styles
-    link.style.color = 'white';
-    link.style.backgroundColor = 'red';
-    link.style.fontWeight = 'bold';
-    link.style.textDecoration = 'none';
-
-    // Set the link text
-    link.textContent = 'Click To Watch';
-    para.style.color = 'white';
-    para.style.backgroundColor = 'red';
-    para.style.fontWeight = 'bold';
-    para.style.textDecoration = 'none';
-
-    // Set the link text
-    para.textContent = 'Scroll Down For Link';
-    // Get the 'anime' div by its id
-    var animeDiv = document.getElementById('anime');
-    var pardiv = document.getElementById('scroll');
-    // Append the link to the 'anime' div
-    pardiv.appendChild(para);
-    animeDiv.appendChild(link);
-  } else {
-    // Handle the case where the 'ep' parameter is not present in the URL
-    console.error('Episode number not found in the URL.');
-  }
 </script>
 <div class="container">
 	<div class="row justify-content-between">
