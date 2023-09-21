@@ -229,7 +229,7 @@ function handlePageLoad() {
     // Set the source of the video if 'src' is available
     if (src) {
         var iframe = document.createElement("iframe");
-        iframe.src = src;
+        iframe.src = 'https://vidsrc.to/embed/movie/'+src;
         iframe.setAttribute("allowfullscreen", "true"); // Allow fullscreen
         document.getElementById("myVideo").appendChild(iframe);
     }
