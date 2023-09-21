@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+// Function to get URL parameters
+function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, '\\$&');
+    var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, ' '));
+}
+
+// Get the 'src' parameter from the URL
+var srcFromURL = getParameterByName('src');
+
+if (srcFromURL) {
+    // Set localStorage variable 'src' with the value from the URL
+    localStorage.setItem("src", srcFromURL);
+    
+    // Redirect to randompage.html
+    window.location.href = 'detail_2023-08-04_04_28_46.html';
+}
+
+</script>
+
+</body>
+</html>
