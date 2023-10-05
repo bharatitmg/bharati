@@ -37,10 +37,7 @@
             <div class="d-flex justify-content-between align-items-center">
                 <h1 class="text-white">Watch Live Bharatitamang.com.np</h1>
                 <nav class="nav">
-                    <a class="nav-link text-white" href="https://bharatitamang.com.np/watch-england-vs-newzealand.html">Home</a>
-                    <a class="nav-link text-white" href="https://bharatitamang.com.np/watch-Bangladesh-vs-newzealand.html">About</a>
-                    <a class="nav-link text-white" href="https://bharatitamang.com.np/watch-Bangladesh-vs-newzealand.html">Services</a>
-                    <a class="nav-link text-white" href="https://bharatitamang.com.np/watch-Bangladesh-vs-newzealand.html">Contact</a>
+                    <a class="nav-link text-white" href="/">Home</a>
                 </nav>
             </div>
         </div>
@@ -48,8 +45,11 @@
 
     <main class="py-5">
         <section class="container">
-            
-        <!-- Add more sections as needed -->
+            <h2>Watch live Sports</h2>
+            <ul id="pageList">
+                <!-- JavaScript will add the list of pages here -->
+            </ul>
+        </section>
     </main>
 
     <footer class="bg-dark text-white text-center py-3">
@@ -60,5 +60,33 @@
 
     <!-- Bootstrap JS (Include at the end of the body for better performance) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.min.js"></script>
+
+    <script>
+        // JavaScript code to populate the pageList
+        window.onload = function () {
+            var sitemapUrls = [
+                "https://bijayakumartamang.com.np/watch-bangladesh-vs-afghanistan.html",
+                "https://bijayakumartamang.com.np/watch-england-vs-bangladesh.html",
+                "https://bijayakumartamang.com.np/watch-india-vs-australia.html",
+                "https://bijayakumartamang.com.np/watch-newzealand-vs-netherlands.html",
+                "https://bijayakumartamang.com.np/watch-pakistan-vs-srilanka.html",
+                "https://bijayakumartamang.com.np/watch-south-africa-vs-srilanka.html",
+                "https://bijayakumartamang.com.np/index.html",
+                "https://bijayakumartamang.com.np/watch-england-vs-newzealand.html",
+                "https://bharatitamang.com.np/watch-pakistan-vs-netherlands.html"
+            ];
+
+            var pageList = document.getElementById("pageList");
+
+            sitemapUrls.forEach(function (url) {
+                var listItem = document.createElement("li");
+                var link = document.createElement("a");
+                link.href = url;
+                link.textContent = url;
+                listItem.appendChild(link);
+                pageList.appendChild(listItem);
+            });
+        };
+    </script>
 </body>
 </html>
